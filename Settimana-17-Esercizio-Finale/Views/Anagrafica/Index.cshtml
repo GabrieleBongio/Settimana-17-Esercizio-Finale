@@ -1,0 +1,24 @@
+﻿@model List<Settimana_17_Esercizio_Finale.Models.Anagrafica>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="d-flex my-3">
+    <h2>Lista Anagrafica:</h2>
+    @Html.ActionLink("Crea Nuovo", "Create", "Anagrafica", new { area = "" }, new { @class = "ms-auto btn btn-outline-primary"})
+</div>
+
+<div>
+    @foreach (Settimana_17_Esercizio_Finale.Models.Anagrafica a in Model)
+    {
+        <div class="border-top border-2 px-3">
+            <p class="fs-4 mt-3 fw-light">
+                <span>@a.Cognome</span>
+                <span>@a.Nome</span>
+            </p>
+            <p class="m-0">Indirizzo: @a.Indirizzo, @a.Città, @a.CAP</p>
+            <p class="mb-3">CF: @a.Cod_Fisc</p>
+        </div>
+    }
+</div>
+

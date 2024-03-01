@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h4>Ricerche Principali:</h4>
+<br />
+<br />
+<br />
+@Html.ActionLink("Totale verbali raggruppati per trasgressore", "Ricerca1", "Group1", new { area = "" }, new { @class = "link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" })
+<br />
+<br />
+<br />
+@Html.ActionLink("Totale punti decurtati ragruppati per trasgressore", "Ricerca2", "Group1", new { area = "" }, new { @class = "link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" })
+<br />
+<br />
+<br />
+@Html.ActionLink("Violazioni con più di 10 punti decurtati", "Ricerca3", "Group1", new { area = "" }, new { @class = "link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" })
+<br />
+<br />
+<br />
+@Html.ActionLink("Violazioni con un importo superiore a 400", "Ricerca4", "Group1", new { area = "" }, new { @class = "link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" })

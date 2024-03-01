@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Ricerca4";
+}
+
+<h2>Violazioni con un importo superiore a 400</h2>
+
+<div>
+    @foreach (Settimana_17_Esercizio_Finale.Models.Verbale v in Model)
+    {
+        <div class="border-top border-2 px-3">
+            <p class="m-0 mt-3">Anagrafica N°@v.IdAnagrafica</p>
+            <p class="m-0">Violazione N°@v.IdViolazione</p>
+            <p class="m-0">Indirizzo: @v.IndirizzoViolazione</p>
+            <p class="m-0">Agente: @v.NominativoAgente</p>
+            <p class="m-0">Data Violazione: @v.DataViolazione - Data Trascrizione Violazione: @v.DataTrascrizioneVerbale</p>
+            <p class="mb-3">Importo: @v.Importo, @if (v.DecurtamentoPunti != null) { Write(v.DecurtamentoPunti); }</p>
+        </div>
+    }
+</div>

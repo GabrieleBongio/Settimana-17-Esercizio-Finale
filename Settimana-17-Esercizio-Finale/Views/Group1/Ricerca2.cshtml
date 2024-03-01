@@ -1,0 +1,16 @@
+﻿@model List<Settimana_17_Esercizio_Finale.Models.Group2>
+
+@{
+    ViewBag.Title = "Ricerca2";
+}
+<h2>Totale punti decurtati ragruppati per trasgressore</h2>
+
+<div>
+    @foreach (Settimana_17_Esercizio_Finale.Models.Group2 g in Model)
+    {
+        <div class="border-top border-2 px-3">
+            <p class="mt-3 m-0">Anagrafica N°@g.Anagrafica</p>
+            <p class="mb-3">Totale Punti Decurtati: @g.TotPunti</p>
+        </div>
+    }
+</div>

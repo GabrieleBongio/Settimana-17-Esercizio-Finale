@@ -1,0 +1,26 @@
+﻿@model List<Settimana_17_Esercizio_Finale.Models.Verbale>
+@{
+    ViewBag.Title = "Index";
+    Dictionary<int, string> dictanag = ViewBag.DictionaryAnagrafica;
+    Dictionary<int, string> dictviol = ViewBag.DictionaryViolazioni;
+}
+
+<div class="d-flex my-3">
+    <h2>Lista Verbali:</h2>
+    @Html.ActionLink("Crea Nuovo", "Create", "Verbale", new { area = "" }, new { @class = "ms-auto btn btn-outline-primary" })
+</div>
+
+<div>
+    @foreach (Settimana_17_Esercizio_Finale.Models.Verbale v in Model)
+    {
+        <div class="border-top border-2 px-3">
+            <p class="m-0">Anagrafica: @dictanag[v.IdAnagrafica]</p>
+            <p class="m-0">Violazione: @dictviol[v.IdViolazione]</p>
+            <p class="m-0">Indirizzo: @v.IndirizzoViolazione</p>
+            <p class="m-0">Agente: @v.NominativoAgente</p>
+            <p class="m-0">Data Violazione: @v.DataViolazione - Data Trascrizione Violazione: @v.DataTrascrizioneVerbale</p>
+            <p class="m-0">Importo: @v.Importo, @if (v.DecurtamentoPunti != null) { Write(v.DecurtamentoPunti); }</p>
+        </div>
+    }
+</div>
+

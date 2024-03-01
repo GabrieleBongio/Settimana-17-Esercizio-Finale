@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1 class="display-6">Corpo di Polizia Municipale</h1>
+
+<div class="w-75 mx-auto my-4"><img alt="Polizia Municipale" src="https://citynews-milanotoday.stgy.ovh/~media/horizontal-hi/1062652149561/vigili-polizia-locale-foto-ufficio-stampa.jpg" class="img-fluid" /></div>
+
+<div class="row">
+    <div class="col-4 border-left border-right border-primary border-opacity-50 text-center">
+        @Html.ActionLink("Anagrafica", "Index", "Anagrafica", new { area = "" }, new { @class = "btn btn-outline-dark fs-4 fw-light" })
+    </div>
+    <div class="col-4 border-left border-right border-primary border-opacity-50 text-center">
+        @Html.ActionLink("Verbali", "Index", "Verbale", new { area = "" }, new { @class = "btn btn-outline-dark fs-4 fw-light" })
+    </div>
+    <div class="col-4 border-left border-right border-primary border-opacity-50 text-center">
+        @Html.ActionLink("Violazione", "Index", "Violazione", new { area = "" }, new { @class = "btn btn-outline-dark fs-4 fw-light" })
+    </div>
+</div>
